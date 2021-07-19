@@ -60,7 +60,8 @@ export const HeroH1 = styled.h1`
     color: #F4F4F9;
     font-size: 48px;
     text-align: center;
-
+    font-family: 'Playfair Display', serif;
+    
     @media screen and (max-width: 768px) {
         font-size: 40px;
     }
