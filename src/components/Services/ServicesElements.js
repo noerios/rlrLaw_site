@@ -52,6 +52,8 @@ export const ServicesCard = styled.div`
     &:hover {
         transform: scale(1.02);
         transition: all 0.2s ease-in-out;
+        /*background: #12355B;
+        color: #F4F4F9;*/
         cursor: pointer;
     }
 `;

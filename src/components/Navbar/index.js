@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {Nav, 
         NavbarContainer, 
@@ -12,9 +12,23 @@ import {Nav,
 
 
 const Navbar = ({ toggle }) => {
+    const [scrollNav, setScrollNav] = useState(false)
+
+    const changeNav = ()=> {
+        if(window.scrollY >= 80) {
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, [])
+
     return (
         <>
-            <Nav>
+            <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
                     <NavLogo to="/">
                         Rolando L Rios Law
@@ -24,7 +38,7 @@ const Navbar = ({ toggle }) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="firm">Firm</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="practice">Practice</NavLinks>
@@ -32,11 +46,8 @@ const Navbar = ({ toggle }) => {
                         <NavItem>
                             <NavLinks to="cases">Cases & Press</NavLinks>
                         </NavItem>
-                        <NavItem>
-                            <NavLinks to="contact">Contact</NavLinks>
-                        </NavItem>
                         <NavBtn>
-                            <NavBtnLink to="/">Home</NavBtnLink>
+                            <NavBtnLink to="contact">Contact</NavBtnLink>
                         </NavBtn>
                     </NavMenu>
                 </NavbarContainer>
