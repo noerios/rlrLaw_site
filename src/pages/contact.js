@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import ContactPage from '../components/ContactPage';
 
-const ContactPage = () => {
+
+const Contact = () => {
     return (
-        <div>
-            <h1>Contact Page!</h1>
-            <h2>incorporate wordpress contact app</h2>
-        </div>
+        <>
+        <ContactPage />
+        </>
     )
 }
 
-export default ContactPage
+export default Contact

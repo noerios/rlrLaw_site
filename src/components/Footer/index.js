@@ -1,4 +1,5 @@
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import { FaFacebook, 
         FaInstagram, 
         FaLinkedin, 
@@ -18,6 +19,11 @@ import { FooterContainer,
         SocialIconLink } from './FooterElements';
 
 const Footer = () => {
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
     return (
         <>
             <FooterContainer>
@@ -65,7 +71,7 @@ const Footer = () => {
                     </FooterLinksContainer>
                     <SocialMedia>
                         <SocialMediaWrap>
-                            <SocialLogo to='/'>RLR Law</SocialLogo>
+                            <SocialLogo to='/' onClick={toggleHome} >Rolando L Rios Law</SocialLogo>
                             <WebsiteRights>Rolando Noe Rios Dev © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                             <SocialIcons>
                                 <SocialIconLink href="//https://www.facebook.com/rolandorioslaw/" target="blank" aria-label="Facebook">

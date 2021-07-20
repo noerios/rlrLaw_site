@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll } from 'react-scroll';
 import {Nav, 
         NavbarContainer, 
         NavLogo, 
@@ -24,13 +26,18 @@ const Navbar = ({ toggle }) => {
 
     useEffect(() => {
         window.addEventListener('scroll', changeNav)
-    }, [])
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
 
     return (
         <>
+        <IconContext.Provider value={{ color: '#F4F4F9'}}>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/">
+                    <NavLogo to="/" onClick={toggleHome}>
                         Rolando L Rios Law
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
@@ -38,10 +45,14 @@ const Navbar = ({ toggle }) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="firm">Firm</NavLinks>
+                            <NavLinks to="firm" 
+                            smooth={true} duration={500} spy={true} exact={'true'} offset={-80}
+                            >Firm</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="practice">Practice</NavLinks>
+                            <NavLinks to="services"
+                            smooth={true} duration={500} spy={true} exact={'true'} offset={-80}
+                            >Practice</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="cases">Cases & Press</NavLinks>
@@ -52,6 +63,7 @@ const Navbar = ({ toggle }) => {
                     </NavMenu>
                 </NavbarContainer>
             </Nav>
+        </IconContext.Provider>    
         </>
     );
 };
