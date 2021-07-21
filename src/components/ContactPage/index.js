@@ -4,18 +4,16 @@ import { Container, FormContent, FormWrap, Icon, Form, FormH1} from './ContactEl
 const ContactPage = () => {
     return (
         <>
-        
-            <Container>
-            
-                <FormWrap>
-                    <Icon to="/">Rolando L Rios Law</Icon>
-                    <FormContent>
-                        <Form action="#">
-                            <FormH1>Contact Us</FormH1>
-                        </Form>
-                    </FormContent>
-                </FormWrap>
-            </Container>
+        <Container>
+            <FormWrap>
+                
+                <FormContent>
+                    <Form action="#">
+                        <FormH1>Contact Us</FormH1>
+                    </Form>
+                </FormContent>
+            </FormWrap>
+        </Container>
             
         </>
     )
