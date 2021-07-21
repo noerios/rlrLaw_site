@@ -15,7 +15,7 @@ export const Container = styled.div`
 `;
 
 export const FormWrap = styled.div`
-    height: 100%auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +53,7 @@ export const FormContent = styled.div`
 
 export const Form = styled.form`
     background: #93B7BE;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     width: 100%;
     z-index: 1;
