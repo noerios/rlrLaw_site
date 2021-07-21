@@ -26,8 +26,6 @@ const Home = () => {
             <InfoSection {...homeObjectTwo} />
             <Services />
             
-            
-            
             <Footer />
 
         </>
