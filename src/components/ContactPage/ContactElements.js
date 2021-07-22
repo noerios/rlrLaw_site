@@ -31,62 +31,92 @@ export const Icon = styled(Link)`
 `;
 
 export const Container = styled.div`
-    min-height: 962px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 0;
-    overflow: hidden;
+    color: #F4F4F9;
     background: #12355B;
-    
+
+    @media screen and (max-width: 768px) {
+        padding: 100px 0;
+    }
 `;
 
-export const FormWrap = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+export const ContactWrap = styled.div`
+    display: grid;
+    z-index: 1;
+    height: 860px;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
     justify-content: center;
 
-    @media screen and (max-width: 400px) {
-        height: 80%;
+`;
+
+export const ContactRow = styled.div`
+    display: grid;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: 'col1 col2';
+`;
+
+export const Column1 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+`;
+
+export const TextWrapper = styled.div`
+    max-width: 540px;
+    padding-top: 0;
+    padding-bottom: 60px;
+`;
+
+export const Topline = styled.p`
+    color: #776D5A;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+`;
+
+export const Heading = styled.h1`
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+
+    @media screen and (max-width: 480px) {
+        font-size: 32px;
     }
+`;
+
+export const Subtitle = styled.p`
+    max-width: 440px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+
+`;
+
+export const Column2 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
 `;
 
 export const FormContent = styled.div`
+    max-width: 555px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #93B7BE;
-
-    @media screen and (max-width: 480px) {
-        padding: 10px;
-    }
 `;
 
 export const Form = styled.form`
-    background: #12355B;
-    max-width: 500px;
-    height: auto;
     width: 100%;
-    z-index: 1;
-    display: grid;
-    margin: 0 auto;
-    padding: 80px 32px;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-
-    @media screen and (max-width: 400px) {
-        padding: 32px 32px;
-    }
+    margin: 0 10px 0;
+    padding-right: 0;
 `;
 
-export const FormH1 = styled.h1`
-    margin-bottom: 40px;
-    color: #F4F4F9;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-`;
