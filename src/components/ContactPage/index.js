@@ -26,9 +26,10 @@ const ContactPage = () => {
                     <Column1>
                         <TextWrapper>
                             <Topline>Contact Us</Topline>
-                            <Heading>210.222.2102</Heading>
-                            <Subtitle>110 Broadway, Suite 355
-                                    San Antonio, TX 78205</Subtitle>
+                            <Heading>Rolando L Rios Law</Heading>
+                            <Subtitle>Phone: 210.222.2102</Subtitle>
+                            <Subtitle>Email: srios@rolandorioslaw.com</Subtitle>
+                            <Subtitle>110 Broadway, Suite 355 San Antonio, TX 78205</Subtitle>
                         </TextWrapper>    
                     </Column1>
                     <Column2>
