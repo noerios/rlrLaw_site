@@ -1,5 +1,4 @@
 import React from 'react';
-import MyMap from './Map'
 import { Container, 
         FormContent, 
         ContactWrap, 
@@ -12,7 +11,9 @@ import { Container,
         Topline, 
         Heading, 
         Subtitle, 
-        Column2} from './ContactElements';
+        Column2, Img} from './ContactElements';
+
+import Building from '../../images/building.jpg'
 
 const ContactPage = () => {
     return (
@@ -35,7 +36,7 @@ const ContactPage = () => {
                     <Column2>
                         <FormContent>
                             <Form>
-                                <MyMap />
+                                <Img src={Building} alt="Law Office Building"/>
                             </Form>
                         </FormContent>
                     </Column2>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const LogoContainer = styled.div`
- display: flex;
+    display: flex;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
@@ -124,3 +124,8 @@ export const Form = styled.form`
     padding-right: 0;
 `;
 
+export const Img = styled.img`
+    width: 100%;
+    margin: 0 10px 0;
+    padding-right: 0;
+`;
