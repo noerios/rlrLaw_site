@@ -71,7 +71,7 @@ const Footer = () => {
                     </FooterLinksContainer>
                     <SocialMedia>
                         <SocialMediaWrap>
-                            <SocialLogo to='/' onClick={toggleHome} >Rolando L Rios Law</SocialLogo>
+                            <SocialLogo to='/' onClick={toggleHome} >Law Office of Rolando L Rios</SocialLogo>
                             <WebsiteRights>Rolando Noe Rios Dev © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
                             <SocialIcons>
                                 <SocialIconLink href="//https://www.facebook.com/rolandorioslaw/" target="blank" aria-label="Facebook">

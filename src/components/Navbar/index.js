@@ -38,7 +38,7 @@ const Navbar = ({ toggle }) => {
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
                     <NavLogo to="/" onClick={toggleHome}>
-                        Rolando L Rios Law
+                        Law Office of Rolando L Rios
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
