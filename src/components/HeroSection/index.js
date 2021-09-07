@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Video from '../../videos/RLREditMQ.mp4';
-import { Button } from '../ButtonElements'
+import { Button } from '../ButtonElements';
+import { Link } from 'react-router-dom';
 import { HeroContainer, 
         HeroBg, 
         VideoBg, 
@@ -29,13 +30,15 @@ const HeroSection = () => {
                 Dedicated to providing clients with professional, knowledgeable and attentive legal, counseling, and legislative services.
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to="contact" onMouseEnter={onHover}
+                    <Link to="/contact">
+                    <Button onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary="true"
                     dark="true"
                     >
                         Get in touch {hover ? <ArrowForward /> : <ArrowRight />} 
                     </Button>
+                    </Link>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
