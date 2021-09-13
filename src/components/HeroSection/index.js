@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Video from '../../videos/RLREditMQ.mp4';
 import { Button } from '../ButtonElements';
-import { Link } from 'react-router-dom';
 import { HeroContainer, 
         HeroBg, 
         VideoBg, 
@@ -10,7 +9,8 @@ import { HeroContainer,
         HeroP, 
         HeroBtnWrapper, 
         ArrowForward, 
-        ArrowRight } from './HeroElements';
+        ArrowRight,
+     } from './HeroElements';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false)
@@ -30,15 +30,16 @@ const HeroSection = () => {
                 Dedicated to providing clients with professional, knowledgeable and attentive legal, counseling, and legislative services.
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Link to="/contact">
-                    <Button onMouseEnter={onHover}
+                    
+                    <Button to="/contact"
+                    onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     primary="true"
                     dark="true"
                     >
                         Get in touch {hover ? <ArrowForward /> : <ArrowRight />} 
                     </Button>
-                    </Link>
+                    
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
